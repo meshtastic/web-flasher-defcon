@@ -16,7 +16,6 @@ import {
 } from '@zip.js/zip.js';
 
 import {
-  type FirmwareReleases,
   type FirmwareResource,
   getCorsFriendyReleaseUrl,
 } from '../types/api';
@@ -62,13 +61,6 @@ export const useFirmwareStore = defineStore('firmware', {
       this.hasSeenReleaseNotes = true
     },
     async fetchList() {
-      firmwareApi.get<FirmwareReleases>()
-        .then((response: FirmwareReleases) => {
-          // Only grab the latest 4 releases
-          this.stable = response.releases.stable.slice(0, 4);
-          this.alpha = response.releases.alpha.slice(0, 4);
-          this.pullRequests = response.pullRequests.slice(0, 4);
-        })
     },
     setSelectedFirmware(firmware: FirmwareResource) {
       this.selectedFirmware = firmware;
