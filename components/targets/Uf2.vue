@@ -1,6 +1,6 @@
 <template>
     <div class="relative p-4 w-full max-w-4xl max-h-full">
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow dark:bg-black">
             <FlashHeader />
             <div class="p-4 md:p-5">
                 <ReleaseNotes />

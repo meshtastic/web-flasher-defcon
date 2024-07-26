@@ -1,7 +1,7 @@
 <template>
   <div class="w-full mt-2" v-if="serialMonitorStore.isConnected || serialMonitorStore.terminalBuffer.length > 0">
     <div class="flex items-center justify-center">
-      <div v-if="serialMonitorStore.isConnected && !serialMonitorStore.isReaderLocked" class="flex items-center p-4 mb-4 text-sm rounded-lg bg-gray-800 text-blue-400" role="alert">
+      <div v-if="serialMonitorStore.isConnected && !serialMonitorStore.isReaderLocked" class="flex items-center p-4 mb-4 text-sm rounded-lg text-blue-400" role="alert">
         <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
           <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
         </svg>
@@ -12,12 +12,12 @@
       </div>
     </div>
     <div class="grid grid-cols-3">
-      <!-- <span class="mb-2 text-xs font-medium me-2 px-2.5 py-0.5 rounded bg-gray-700 text-gray-300">
+      <!-- <span class="mb-2 text-xs font-medium me-2 px-2.5 py-0.5 rounded bg-black text-gray-300">
         {{ serialMonitorStore.isConnected ? 'Connected' : 'Disconnected'}}
       </span> -->
       <div class="col"> 
         <div class="flex items-center justify-start px-2">
-          <button type="button" @click="logLevel = 'all'" class="relative border focus:ring-4 focus:outline-none rounded-full text-xs font-medium px-4 py-1.5 text-center me-3 mb-2 border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 bg-gray-900 focus:ring-blue-800">
+          <button type="button" @click="logLevel = 'all'" class="relative border focus:ring-4 focus:outline-none rounded-full text-xs font-medium px-4 py-1.5 text-center me-3 mb-2 border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 focus:ring-blue-800">
             All
             <div v-if="logCounts.all > 0" class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-black bg-blue-500 rounded-full -top-3 -end-3">{{ logCounts.all }}</div>
           </button>

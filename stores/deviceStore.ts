@@ -42,15 +42,7 @@ export const useDeviceStore = defineStore('device', {
     },
     actions: {
         async fetchList() {
-            try {
-                const targets = await firmwareApi.get<DeviceHardware[]>()
-                this.targets = targets.filter((t: DeviceHardware) => t.activelySupported);
-            }
-            catch (ex) {
-                console.error(ex);
-                // Fallback to offline list
-                this.targets = OfflineHardwareList.filter((t: DeviceHardware) => t.activelySupported);
-            }
+            this.targets = OfflineHardwareList.filter((t: DeviceHardware) => t.activelySupported);
         },
         setSelectedTarget(target: DeviceHardware) {
             this.selectedTarget = target;

@@ -15,9 +15,10 @@
           <div class="flex flex-col content-center justify-center">
             <div class="flex flex-wrap sm:flex-row flex-col py-1">
               <div class="mx-auto">
-                <img src="@/assets/img/logo.svg" class="h-32 w-32 inline-block pt-0 mt-0" alt="Meshtastic Logo" />
+                <img src="@/assets/img/logo.svg" class="h-32 w-32 inline-block pt-0 mt-1" alt="Meshtastic Logo" />
+                <img src="@/assets/img/defcon.svg" class="h-32 w-36 inline-block pt-0 mt-0" alt="DEFCON Logo" />
                 <h1 class="text-white text-6xl font-bold inline-block ml-4 mt-8 align-top">
-                  Flasher
+                  DEFCON Edition Flasher
                 </h1>
               </div>
             </div>
@@ -73,15 +74,17 @@
 
     <SerialMonitor />
 
-    <footer class="footer bg-2C2D3C text-white mt-4 py-4">
-      <div class="container mx-auto px-5 py-4 text-center">
-        <p>
-          Powered by
-          <a href="https://vercel.com/?utm_source=meshtastic&utm_campaign=oss">▲ Vercel</a>
-          | Meshtastic® is a registered trademark of Meshtastic LLC. |
-          <a href="https://meshtastic.org/docs/legal">Legal Information</a>.
-        </p>
-      </div>
+    <footer class="footer text-white py-4">
+      <canvas>
+        <div class="container mx-auto px-5 py-4 text-center">
+          <p>
+            Powered by
+            <a href="https://vercel.com/?utm_source=meshtastic&utm_campaign=oss">▲ Vercel</a>
+            | Meshtastic® is a registered trademark of Meshtastic LLC. |
+            <a href="https://meshtastic.org/docs/legal">Legal Information</a>.
+          </p>
+        </div>
+      </canvas>
     </footer>
     <div class="fixed -end-4 bottom-6 group">
       <button type="button" :disabled="true" 
@@ -158,7 +161,7 @@ onMounted(() => {
 
 <style>
   body {
-    background-color: #2C2D3C;
+    background-color: #000000;
   }
   .invert { 
     -webkit-filter: invert(1);
@@ -174,7 +177,6 @@ onMounted(() => {
     border-color: #67EA94;
   }
   .footer {
-    background-color: #2C2D3C;
   }
   .footer a {
     color: #67EA94;

@@ -1,6 +1,6 @@
 <template>
     <div class="relative w-full max-w-4xl max-h-full">
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded-lg shadow dark:bg-black">
             <FlashHeader />
             <div class="p-4 md:p-5">
                 <ReleaseNotes />
@@ -55,7 +55,7 @@
                         </h3>
                         <label class="relative inline-flex items-center me-5 cursor-pointer" v-if="canFullInstall()">
                             <input type="checkbox" value="" class="sr-only peer" v-model="firmwareStore.$state.shouldCleanInstall">
-                            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4  dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-600"></div>
+                            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4  dark:bg-black peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-600"></div>
                             <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Full Erase and Install</span>
                         </label>
                         <p>
@@ -81,7 +81,7 @@
                         Start Over
                     </button>
                     <div v-if="firmwareStore.$state.flashPercentDone > 0" class="mb-1 text-center font-medium text-white">Flashing {{ partition }} {{ firmwareStore.percentDone }} complete</div>
-                    <div class="w-fullrounded-full h-2.5 mb-4 bg-gray-700" v-if="firmwareStore.$state.flashPercentDone > 0">
+                    <div class="w-fullrounded-full h-2.5 mb-4 bg-black" v-if="firmwareStore.$state.flashPercentDone > 0">
                         <div class="bg-meshtastic h-2.5 rounded-full" :style=" { 'width': firmwareStore.percentDone }"></div>
                     </div>
                 </div>
