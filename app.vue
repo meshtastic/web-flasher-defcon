@@ -16,10 +16,10 @@
             <div class="flex flex-wrap sm:flex-row flex-col py-1">
               <div class="mx-auto">
                 <img src="@/assets/img/logo.svg" class="h-32 w-32 inline-block pt-0 mt-1" alt="Meshtastic Logo" />
-                <img src="@/assets/img/defcon.svg" class="h-32 w-36 inline-block pt-0 mt-0" alt="DEFCON Logo" />
                 <h1 class="text-white text-6xl font-bold inline-block ml-4 mt-8 align-top">
                   DEFCON Edition Flasher
                 </h1>
+                <img src="@/assets/img/defcon.svg" class="h-32 w-36 inline-block pt-0 mt-0" alt="DEFCON Logo" />
               </div>
             </div>
           </div>
