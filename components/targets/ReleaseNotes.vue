@@ -3,9 +3,9 @@
     <h1>
       {{ firmwareStore.selectedFirmware?.title }}
     </h1>
-    <div v-if="releaseNotes" v-html="releaseNotes">
+    <div class="font-mono mb-2" v-if="releaseNotes" v-html="releaseNotes">
     </div>
-    <button @click="firmwareStore.continueToFlash()" class="border border-meshtastic focus:ring-4 focus:outline-none font-medium rounded-lg text-small px-4 py-2 text-center me-2 mb-2 text-meshtastic hover:text-black hover:bg-white hover:border-transparent hover:shadow">
+    <button @click="firmwareStore.continueToFlash()" class="border border-meshtastic focus:ring-4 focus:outline-none font-medium rounded-lg text-small px-4 py-2 text-center me-2 my-2 text-meshtastic hover:text-black hover:bg-white hover:border-transparent hover:shadow">
       Continue
     </button>
   </div>
@@ -29,7 +29,7 @@ watch(() => firmwareStore.selectedFirmware, async () => {
     console.log('Parsing release notes markdown');
     const output = await marked(notes);
     releaseNotes.value = output
-      .replaceAll('<p>', '<blockquote class="p-4 my-4 border-s-4 border-meshtastic bg-gray-800">')
+      .replaceAll('<p>', '<blockquote class="p-4 my-4 border-s-4 border-meshtastic bg-purple-700 text-white">')
       .replaceAll('</p>','</blockquote>')
       .replaceAll('<br>','')
       .replaceAll('[!IMPORTANT]', '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" /></svg>')

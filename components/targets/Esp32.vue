@@ -6,13 +6,13 @@
                 <ReleaseNotes />
                 <ol v-if="firmwareStore.canShowFlash" class="relative border-s border-gray-200 dark:border-gray-600 ms-3.5 mb-4 md:mb-5">
                     <li class="mb-10 ms-8">
-                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900">
                             1
                         </span>
                         <h3 class="flex items-start mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                             Ensure device is plugged in via USB
                         </h3>
-                        <div class="p-4 mb-4 my-2 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+                        <div class="p-4 mb-4 my-2 text-sm text-purple-800 rounded-lg bg-purple-50 dark:bg-gray-800 dark:text-purple-400" role="alert">
                             <span class="font-medium">
                                 <InformationCircleIcon class="h-4 w-4 inline" />
                                 If your device is ESP32-S3 based, you may need to turn off, then press and hold the BOOT / USR button while plugging in the USB cable.
@@ -29,14 +29,14 @@
 
                     </li>
                     <li class="mb-10 ms-8">
-                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900">
                             2
                         </span>
                         <h3 class="flex items-start mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                             Choose baud rate
                         </h3>
                         <div>
-                            <select class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50" v-model="firmwareStore.$state.baudRate">
+                            <select class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-purple-300 focus:ring focus:ring-purple-200 focus:ring-opacity-50 font-black" v-model="firmwareStore.$state.baudRate">
                                 <option value="115200">115200</option>
                                 <option value="230400">230400</option>
                                 <option value="460800">460800</option>
@@ -47,7 +47,7 @@
                         </div>
                     </li>
                     <li class="ms-8">
-                        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900">
                             3
                         </span>
                         <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
@@ -62,7 +62,7 @@
                             This process could take a minute. 
                         </p>
                         <p>
-                        <div class="p-4 mb-4 my-2 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+                        <div class="p-4 mb-4 my-2 text-sm text-purple-800 rounded-lg bg-purple-50 dark:bg-gray-800 dark:text-purple-400" role="alert">
                             <span class="font-medium">
                             <InformationCircleIcon class="h-4 w-4 inline" />
                             After the flashing process is complete, you may need to press the RST button if the device does not reboot automatically or says "waiting to download" in the console.
@@ -73,11 +73,11 @@
                 </ol>
                 <div v-if="firmwareStore.canShowFlash">
                     <button v-if="showFlashButton"
-                        class="text-black inline-flex w-full justify-center bg-meshtastic hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" @click="flash">
+                        class="text-black inline-flex w-full justify-center bg-meshtastic hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" @click="flash">
                         {{ firmwareStore.$state.shouldCleanInstall ? 'Erase Flash and Install' : 'Update' }}
                     </button>
                     <button v-if="firmwareStore.$state.flashPercentDone > 0 && !firmwareStore.$state.isFlashing"
-                        class="text-black inline-flex w-full justify-center bg-meshtastic hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" @click="startOver">
+                        class="text-black inline-flex w-full justify-center bg-meshtastic hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" @click="startOver">
                         Start Over
                     </button>
                     <div v-if="firmwareStore.$state.flashPercentDone > 0" class="mb-1 text-center font-medium text-white">Flashing {{ partition }} {{ firmwareStore.percentDone }} complete</div>
