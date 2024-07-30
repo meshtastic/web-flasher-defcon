@@ -17,7 +17,7 @@
               <div class="mx-auto">
                 <img src="@/assets/img/logo.svg" class="h-32 w-32 inline-block pt-0 mt-1 text-meshtastic" alt="Meshtastic Logo" />
                 <h1 class="text-white text-6xl font-bold inline-block ml-4 mt-8 align-top">
-                  DEF CON 32 Edition Flasher
+                  DEF CON Edition Flasher
                 </h1>
                 <img src="@/assets/img/dc32-logo-full-color-semi-transparent-bg.png" class="w-32 inline-block ml-4 pt-0 mt-0" alt="DEFCON Logo" />
               </div>
