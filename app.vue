@@ -15,14 +15,17 @@
           <div class="flex flex-col content-center justify-center">
             <div class="flex flex-wrap sm:flex-row flex-col py-1">
               <div class="mx-auto">
-                <img src="@/assets/img/logo.svg" class="h-32 w-32 inline-block pt-0 mt-1" alt="Meshtastic Logo" />
+                <img src="@/assets/img/logo.svg" class="h-32 w-32 inline-block pt-0 mt-1 text-meshtastic" alt="Meshtastic Logo" />
                 <h1 class="text-white text-6xl font-bold inline-block ml-4 mt-8 align-top">
-                  DEFCON Edition Flasher
+                  DEF CON 32 Edition Flasher
                 </h1>
-                <img src="@/assets/img/defcon.svg" class="h-32 w-36 inline-block pt-0 mt-0" alt="DEFCON Logo" />
+                <img src="@/assets/img/dc32-logo-full-color-semi-transparent-bg.png" class="w-32 inline-block ml-4 pt-0 mt-0" alt="DEFCON Logo" />
               </div>
             </div>
           </div>
+          <blockquote>
+            <ExclamationTriangleIcon class="h-4 w-4 inline"/> DEF CON 32 Edition firmware is not affiliated with or sponsored by DEF CON in any way. This release is only intended to encourage building a network for Meshtastic enthusiasts during the event.
+          </blockquote>
           <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
             <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
               <div class="rounded-lg h-72 overflow-hidden flex flex-col items-center display-inline">
@@ -119,6 +122,7 @@ import {
 import {
   BoltIcon,
   CommandLineIcon,
+  ExclamationTriangleIcon,
   FolderArrowDownIcon,
 } from '@heroicons/vue/24/solid';
 
@@ -168,7 +172,7 @@ onMounted(() => {
     filter: invert(1);
   }
   .text-meshtastic {
-    color: #67EA94;
+  color: #67EA94;
   }
   .bg-meshtastic {
     background-color: #67EA94;
