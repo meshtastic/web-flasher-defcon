@@ -26,5 +26,5 @@ export interface DeviceHardware {
 export function getCorsFriendyReleaseUrl(url: string) {
 	const zipName = url.split('/').slice(-1)[0];
 	const firmwareName = zipName.replace('.zip', '')
-	return `https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/master/${firmwareName}`;
+	return `https://raw.githubusercontent.com/meshtastic/meshtastic.github.io/master/defcon/${firmwareName}`;
 }
