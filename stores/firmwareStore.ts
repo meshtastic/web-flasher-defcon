@@ -27,10 +27,10 @@ export const useFirmwareStore = defineStore('firmware', {
   state: () => {
     return {
       stable: [<FirmwareResource>{
-        id: "v2.4.2.8b2d24c",
+        id: "v2.4.2.a13fc13",
         title: "Meshtastic DEFCON 32 Edition Firmware",
-        page_url: "https://github.com/meshtastic/defcontastic/releases/tag/v2.4.2.8b2d24c",
-        zip_url: "https://github.com/meshtastic/defcontastic/releases/download/v2.4.2.8b2d24c/firmware-2.4.2.8b2d24c.zip",
+        page_url: "https://github.com/meshtastic/defcontastic/releases/tag/v2.4.2.a13fc13",
+        zip_url: "https://github.com/meshtastic/defcontastic/releases/download/v2.4.2.a13fc13/firmware-2.4.2.a13fc13.zip",
         release_notes: `\r\n> [!IMPORTANT]\r\n> This installation will factory reset your device in order to install the DEFCON specific configurations.\r\n> We recommend that you document or backup your existing config before proceeding.\r\nAfter the event, you can install the normal version of Meshtastic and restore your settings.\r\n\r\n## Features\r\n* Custom DEF CON 32 boot screen\r\n* Comes pre-loaded with the *DEFCONnect* channel so you can connect with other Meshtastic users at the event\r\n* Pre-loaded with RTTTL ringtone (must enable external notifications if your device supports this)\r\n* Includes traffic optimizations to maximize the performance of the local mesh and reduce congestion\r\n\r\n`
       }],
       alpha: new Array<FirmwareResource>(),
